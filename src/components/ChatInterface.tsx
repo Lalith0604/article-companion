@@ -33,7 +33,7 @@ const ChatInterface = ({ indexId }: ChatInterfaceProps) => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/ask/", {
+      const res = await fetch("https://research-ai-backend-gdqm.onrender.com/api/ask/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question, index_id: indexId }),
