@@ -42,6 +42,7 @@ const UrlInputPanel = ({ onProcessed, isProcessed }: UrlInputPanelProps) => {
       });
       if (!res.ok) throw new Error("Failed to process URLs");
       const data = await res.json();
+      console.log("PROCESS RESPONSE:", data);
       onProcessed(data.index_id);
     } catch (e: any) {
       setError(e.message || "Something went wrong");
