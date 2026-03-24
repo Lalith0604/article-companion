@@ -35,7 +35,7 @@ const UrlInputPanel = ({ onProcessed, isProcessed }: UrlInputPanelProps) => {
     setError(null);
     setLoading(true);
     try {
-      const res = await fetch("https://research-ai-backend-gdqm.onrender.com", {
+      const res = await fetch("https://research-ai-backend-gdqm.onrender.com/api/process-urls/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ urls: validUrls }),
